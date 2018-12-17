@@ -1,50 +1,67 @@
 const express = require('express');
-const bodyParser = require('body-parser')
-const exphbs = require('express-handlebars')
-
-// secret key: sk_test_WnIstwA8uDXtwfdv3Se4vaNL
-const keys = require('./config/keys')
+const keys = require('./config/keys');
 const stripe = require('stripe')(keys.stripeSecretKey);
+const bodyParser = require('body-parser');
+const exphbs = require('express-handlebars');
 
 const app = express();
 
 // Handlebars Middleware
-app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.engine('handlebars',exphbs({defaultLayout:'main'}));
 app.set('view engine', 'handlebars');
 
-//Body Parser Middleware
+// Body Parser Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 
-//Set static folder
-app.use(express.static(`${__dirname}/public`))
+// Set Static Folder
+app.use(express.static(`${__dirname}/public`));
 
-//Index route
+// Index Route
 app.get('/', (req, res) => {
-    res.render('index',{
-        stripePublishableKey: keys.stripePublishableKey
-    });
+  res.render('index', {
+    stripePublishableKey: keys.stripePublishableKey
+  });
 });
 
-//Charge route
+// Shop Route
+app.get('/shop', (req, res) => {
+  res.render('shop', {
+    stripePublishableKey: keys.stripePublishableKey
+  });
+});
+
+// About Route
+app.get('/about', (req, res) => {
+  res.render('about');
+});
+
+// About Route
+app.get('/contact', (req, res) => {
+  res.render('contact');
+});
+
+
+
+// Charge Route
 app.post('/charge', (req, res) => {
-    const amount = 2500;
-    // Create a new customer and then a new charge for that customer:
-    stripe.customers.create({
-        email: req.body.stripeEmail,
-        source: req.body.stripeToken
-    })
-    .then(customer => stripe.charges.create({
-        amount:amount,
-        description: 'web development ebook',
-        currency: 'usd',
-        customer: customer.id
-    }))
-    .then(charge => res.render('success'))
+  const amount = 2500;
+  
+  stripe.customers.create({
+    email: req.body.stripeEmail,
+    source: req.body.stripeToken
+  })
+  .then(customer => stripe.charges.create({
+    amount,
+    description: 'NYX Camping',
+    currency: 'usd',
+    customer: customer.id
+  }))
+  .then(charge => res.render('success'));
 });
 
+const port = process.env.PORT || 5000;
 
-const port = process.env.PORT || 5000
-app.listen(port, ()=>{
-    console.log(`server starts on ${port}`)
-})
+app.listen(port, () => {
+  console.log(`Server started on port ${port}`);
+});

@@ -1,25 +1,102 @@
-<section class="py-2">
-  <div class="row">
-    <div class="col-md-6 text-center">
-      <h1 class="display-3 mt-3 pt-5">
-        Web Development Ebook
-      </h1><p class="lead">learn web development front to back</p>
-      <form action="/charge" method="POST">
-        <script
-          src="{{stripePublishableKey}}" class="stripe-button"
-          data-key="pk_test_j5uN6whJXLa8kvYo8O9Ls7uH"
-          data-amount="2500"
-          data-name="Web Development Ebook"
-          data-description="Ebook written by Brad Traversy"
-          data-image="/img/marketplace.png"
-          data-locale="auto">
-        </script>
-        <script>
-          // Hide default stripe button
-          document.getElementsByClassName('stripe-button-el')[0].style.display = 'none';
-        </script>
-        <button type="submit">Purchase For $25</button>
-      </form>
+
+<div class="jumbotron">
+    <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <h4>Convenient and comfort<br></h4>
+          <div class="shopButton">
+          <a href="/shop">SHOP NOW</a>
+          </div>
+        </div>
+        <div class="item">
+          <h4>Top quality and easy to use<br></h4>
+            <div class="shopButton">
+          <a href="/shop">SHOP NOW</a>
+          </div>
+        </div>
+        <div class="item">
+          <h4>Stress free<br></h4>
+            <div class="shopButton">
+         <a href="/shop">SHOP NOW</a>
+          </div>
+        </div>
+      </div>
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+</div>
+
+
+<div class="container-fluid" id="whatIsNyx">
+  <h1>What is NYX?</h1>
+  <p>NYX Camping takes care of your camping needs while you enjoy the music festival</p>
+</div>
+
+<hr/>
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <h2>NYX can help you</h2>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-home logo-small"></span>
+      <h4>SHELTER</h4>
+      <p>Top quality tent and easy to use</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-bed logo-small"></span>
+      <h4>COMFORT</h4>
+      <p>Spacious enough to fit 2 to 4 people </p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-music logo-small"></span>
+      <h4>Convenient</h4>
+      <p>Convenient and stress free</p>
     </div>
   </div>
-</section>
+  <br>
+</div>
+
+<hr/>
+
+<div id="firstItem" class="container-fluid">
+  <div class="row">
+    <div class="col-md-7">
+      <h2>Green Hulk Tent</h2><br>
+      <p>Inside, there's enough room to stretch out on two queen-sized airbeds, and storage pockets help to keep small items organized. When it's time to head home, the tent easily packs up into an expandable carry bag with a rip strip until you're off on your next adventure</p>
+      <div class="itemShopButton">
+        <a href="/shop">SHOP TENTS</a>
+      </div>
+    </div>
+    <div class="col-md-5" id="aboutImageFirst">
+    </div>
+    </div>
+  </div>
+</div>
+<hr/>
+<div id="secondItem" class="container-fluid">
+  <div class="row">
+     <div class="col-md-5" id="aboutImageSecond">
+    </div>
+    <div class="col-md-7">
+      <h2>Orange OJ Tent</h2><br>
+      <p>Inside, there's enough room to stretch out on two queen-sized airbeds, and storage pockets help to keep small items organized. When it's time to head home, the tent easily packs up into an expandable carry bag with a rip strip until you're off on your next adventure</p>
+      <div class="itemShopButton">
+        <a href="/shop">SHOP TENTS</a>
+      </div>
+    </div>
+   
+    </div>
+  </div>
+</div>
+
+<div id="statement" class="container-fluid">
+</div>

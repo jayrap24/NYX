@@ -1,0 +1,14 @@
+.contactPage{
+    padding:40px;
+    text-align: center;
+}
+
+.contactPage h1{
+    padding:40px;
+}
+
+.contactPage p{
+    padding:10px;
+    width: 70%;
+    margin:auto;
+}

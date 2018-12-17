@@ -1,0 +1,24 @@
+.missionStatement{
+    padding: 40px;
+    text-align: center;
+}
+
+.missionImage{
+    background-image: url('../img/photo-1508873696983-2dfd5898f08b.jpeg');
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    height: 340px;;
+}
+
+.missionStatement p{
+    padding: 40px;
+    font-size: 20px;
+    width: 90%;
+    margin: auto; 
+}
+
+.missionStatement h1{
+    padding: 30px;
+
+}

@@ -1,0 +1,107 @@
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    margin: auto;
+    justify-content: space-around;
+    padding-top:10px;
+  }
+  
+  .flex-container > div {
+    background-color: #ffffff;
+    width: 300px;
+    height: 400px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+  }
+
+  .shopSection{
+      padding: 40px;
+      margin-top:40px;
+      text-align: center;
+  }
+
+  .shopSection h1{
+   color: rgb(75, 75, 75);
+}
+
+ #tentImageOne{
+     background-image: url('../img/tents/tentOne.jpeg');
+     background-position:center;
+     background-repeat: none;
+     background-size: cover;
+     height: 200px;
+     width:300px;
+ }
+
+ #tentImageTwo{
+    background-image: url('../img/tents/tentTwo.jpeg');
+    background-position:center;
+    background-repeat: none;
+    background-size: cover;
+    height: 200px;
+    width:300px;
+}
+
+#tentImageThree{
+    background-image: url('../img/tents/tentThree.jpeg');
+    background-position:center;
+    background-repeat: none;
+    background-size: cover;
+    height: 200px;
+    width:300px;
+}
+#tentImageFour{
+    background-image: url('../img/tents/tentFour.jpeg');
+    background-position:center;
+    background-repeat: none;
+    background-size: cover;
+    height: 200px;
+    width:300px;
+}
+#tentImageFive{
+    background-image: url('../img/tents/tentFive.jpeg');
+    background-position:center;
+    background-repeat: none;
+    background-size: cover;
+    height: 200px;
+    width:300px;
+}
+#tentImageSix{
+    background-image: url('../img/tents/tentSix.jpeg');
+    background-position:center;
+    background-repeat: none;
+    background-size: cover;
+    height: 200px;
+    width:300px;
+}
+
+
+ .tentDescription h2{
+    font-size: 18px;
+    margin: 0;
+    padding: 30px;
+    letter-spacing: -1px;
+
+
+ }
+
+ .tentDescription p{
+    font-size: 15px;
+    margin: 0;
+ }
+form{
+    margin-top: -40px;
+   
+}
+.buyButton{
+    font-size: 10px;
+    background: transparent;
+    text-align: center;
+    border: none;
+    color: rgb(78, 78, 78);
+    font-size: 14px;
+}
+
