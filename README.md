@@ -1,4 +1,4 @@
-# NYX
+# NYX (eCommerce website)
 
 NYX is company that sells tents as a service to clients  
 
